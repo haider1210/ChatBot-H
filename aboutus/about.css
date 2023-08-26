@@ -1,0 +1,240 @@
+
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    /* background:linear-gradient(135deg ,#70b6af,#3c3cae) */
+    background: #fbfbfb14;
+}
+    
+
+
+/* Header styles */
+.heading {
+    
+    text-align: center;
+    padding: 40px 0;
+}
+.heading h1::after{
+    content:"";
+    position: absolute;
+    width: 37%;
+    height: 1px;
+    display: block;
+    margin: 0 auto ;
+    background-color: #000000;
+    
+    margin-left:30%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.heading h1 {
+    font-size: 42px;
+    margin: 10px;
+}
+.heading h3{
+  color:#1a28b9;
+  margin:25px 0 0 0;
+  font-size:25px;
+  
+}
+
+
+
+/* Container styles */
+.container {
+    margin-top:-40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    
+}
+
+
+/* About section styles */
+.about {
+    display: flex;
+    flex-direction:column;
+    text-align:center;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    padding: 20px;
+    background:#7777770f;
+    
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+.about-image img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+
+.CardCenterA {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.cardA {
+    height: 250px;
+    overflow-y: auto;
+   align-items: center;
+   background: #77777714;
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+    /* Adjust shadow properties */
+    padding:10px;
+    margin: 16px;
+    flex: 0 0 calc(33.33% - 0px);
+    /* Adjust spacing as needed */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.cardA::-webkit-scrollbar {
+    width: 5px; /* Adjust the width as needed */
+    display: none;
+}
+
+.cardA::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.cardA h3 {
+    font-size: 15px;
+    text-align: center;
+    margin:0 0 10px 0px;
+}
+
+/* Style for the image */
+.imageA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.imageA img {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+/* Style for the text content */
+.contentA {
+    text-align: center;
+}
+
+.contentA p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.3;
+   
+}
+
+/* Hover effect */
+.cardA:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    /* Enhanced shadow on hover */
+}
+
+/* footer */
+
+footer {
+    background:linear-gradient(135deg ,#da66d0 ,#0b1aaf);
+    color: white;
+    padding: 20px 0px 70px 0px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .footer-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #3498db;
+  }
+  
+  .footer-info p {
+    font-size: 14px;
+    margin: 0;
+    padding-bottom:20px;
+  }
+  
+  
+@media (max-width: 500px) 
+{
+  .heading h1{
+    font-size:28px;
+  }
+  .heading h3{
+  color:#1a28b9;
+  margin:25px 0 0 0;
+  font-size:22px;
+  
+}
+  .heading p {
+    margin:10px 0 -20px 0px;
+    font-size: 23px;
+    color: #2270ff;
+    font-weight:bold;
+}
+.cardA {
+   
+    
+    padding:7px;
+    margin: 10px;
+   
+}
+}

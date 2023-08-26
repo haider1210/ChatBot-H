@@ -1,0 +1,119 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f0f0;}
+
+.N-H {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-family: 'Poppins', sans-serif;
+    color: #010101;
+    font-size: 55px;
+}
+
+#main {
+    width: 100%;
+    height: 100px;
+    padding-bottom: 50px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#addBtn {
+    position: fixed;
+    right: 2px;
+    bottom: 75px;
+    background-color: #0e52b0;
+    color: #fefefe;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    z-index: 99;
+}
+
+.N {
+    margin: 0 25px;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+.note {
+    width: 45%;
+    min-width: 300px;
+    margin: 15px;
+    position: relative;
+}
+
+.tool {
+    width: 100%;
+    background-color: #122e98;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tool i {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.note textarea {
+    border: none;
+    width: 100%;
+    min-height: 210px;
+    max-height: 400px;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+    overflow-y: auto;
+    background: #ffff;
+    border: 2px solid #314c94;
+}
+
+.note textarea:focus {
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    outline: 0;
+}
+
+@media (max-width: 659px) {
+    .note {
+        width: 95%;
+        position: relative;
+    }
+    .N-H {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 500px) {
+    .note {
+        width: 85%;
+        position: relative;
+    }
+    .N-H {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 312px) {
+    .note {
+        width: 99%;
+        position: relative;
+        min-width: 200px;
+    }
+    .N-H {
+        font-size: 24px;
+    }
+}

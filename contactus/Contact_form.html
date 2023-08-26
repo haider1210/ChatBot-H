@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="Contact_form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/sweetalert/dist/sweetalert.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="form-conatiner">
+            <div class="info">
+                <div class="pack">
+                    <div class="text">
+                        <h3>Get In Touch</h3>
+                    </div>
+                    <div class="text">
+                        <h4>Email</h4>
+                        <span>mdhaiderali1012@gmail.com</span>
+                    </div>
+                    <div class="text">
+                        <h4>WhatsApp Number</h4>
+                        <span>+91-9891270661</span>
+                    </div>
+                    <div class="social-button">
+                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <form action="" name="formgroup">
+                <div class="input-control">
+                    <label for="Name">Name <span class="required">*</span></label><br>
+                    <input type="text" placeholder="Enter your Name" id="name" required>
+                </div>
+                <div class="input-control">
+                    <label for="Email">Email <span class="required">*</span></label><br>
+                    <input type="email"  placeholder="Enter your Email" id="email" required>
+                </div>
+                <div class="input-control">
+                    <label for="Contact">Contact Number</label><br>
+                    <input type="text" placeholder="Enter your Contact Number" id="phone">
+                </div>
+                <div class="input-control">
+                    <label for="Subject">Subject</label><br>
+                    <input type="text" placeholder="Enter your Subject" id="subject"> 
+                </div>
+                <div class="input-control">
+                    <label for="Message">Message</label><br>
+                    <textarea name="" id="message" rows="3" placeholder="Enter your Message..." required></textarea>
+                </div>
+                <div class="input-control">
+                    <button type="button" onclick="sendemail()">Send</button>
+                </div>
+            </form>
+        </div>
+        <div class="popup" id="popup">
+            <div class="check">
+                <i class="fa fa-check-square" aria-hidden="true"></i>
+                <div class="para">Successful</div>
+                <p>Your data successfully received</p>
+                <button class="ok" onclick="remove()">OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        function sendemail() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var sub = document.getElementById("subject").value;
+            var mess = document.getElementById("message").value;
+            var body = "Name: " + name + "<br>Email: " + email + "<br>Contact number: " + phone + "<br>User Message: " + mess;
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "mdhaiderali1012@gmail.com",
+                Password: "1B9D3C5080A36EF349A4857E948455C0E963",
+                To: "mdhaideral7654@gmail.com",
+                From: "mdhaiderali1012@gmail.com",
+                Subject: sub,
+                Body: body
+            }).then(message => {
+                if (message === 'OK') {
+                    swal("Successful!", "Your data is successfully received", "success");
+                } else {
+                    swal("Something is wrong!", "Your data is not received", "error");
+                }
+            });
+        }
+    </script>
+
+
+  <!-- bottonbtn -->
+  <style>
+    .nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 3px rgba(137, 127, 127, 0.2);
+    background-color: #f2f2f2;
+    display: flex;
+    overflow-x: auto;
+    left:0;
+}
+
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top:1px #abaaaa solid;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #000000;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+    background-color: #7ff7ec;
+}
+
+.nav__link--active {
+    color: #0e0fff;
+}
+
+.nav__icon {
+    font-size: 20px;
+}
+
+  </style>
+    <nav class="nav">
+
+      <a a href="../index.html" class="nav__link" >
+        <i class="material-icons nav__icon">home</i>
+        <span class="nav__text">Home</span>
+      </a>
+      <a href="/Notes/index.html" class="nav__link">
+        <i class="material-icons nav__icon">description</i>
+        <span class="nav__text">Notes</span>
+      </a>
+      
+      <a href="" class="nav__link">
+        <i class="material-icons nav__icon"  id="contactLink">contact_mail </i>
+        <span class="nav__text">Contact</span>
+      </a>
+      <a href="../aboutus/about.html" class="nav__link">
+        <i class="material-icons nav__icon">info</i>
+        <span class="nav__text">About</span>
+      </a>
+      <a href="https://www.google.com" class="nav__link">
+        <i class="material-icons nav__icon">troubleshoot</i>
+        <span class="nav__text">Google</span>
+      </a>
+    </nav>
+
+<script >
+  document.addEventListener("DOMContentLoaded", function() {
+            var homeLink = document.getElementById("contactLink");
+            homeLink.classList.add("nav__link--active");
+        });
+</script>
+
+   
+</body>
+</html>

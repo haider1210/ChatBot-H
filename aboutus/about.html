@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>About us</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>About Us</h1>
+        <h3>Welcome to ChatBot_H</h3>
+        
+    
+    </div>
+    <div class="container">
+        <section class="about">
+            <div class="about-image">
+                <img src="iqralogo.png" alt="logo">
+            </div>
+            <div class="about-content">
+                <h2>About Iqra group  </h2>
+                <p>Explore the incredible skills of IQRA Group - a pioneering team focused on creating impressive websites and Android apps. Dedicated to excellence, IQRA Group uses its unique abilities to make creative solutions that go beyond limits. Our experts combine imagination with the latest technology, making eye-catching websites and feature-packed Android apps. With a history of success, IQRA Group is a symbol of cleverness and skill. Come join us in changing the digital world, as we discover new possibilities and set higher standards in development.</p>
+
+               
+            </div>
+            </div>
+  
+<!-- 
+      cards       -->
+
+      <div class="CardCenterA">
+        <div class="cardA r" >
+           
+            <div class="imageA">
+                <img src="mission.jpeg" alt="Card Image" background> </div>
+                <h3>MISSION</h3>
+           
+            <div class="contentA">
+                <p>The mission of IQRA Group is to excel in web and Android development by crafting innovative solutions. We aim to combine creativity with advanced technology to create captivating websites and feature-rich apps. Our goal is to push boundaries and set new standards in the digital world....</p>
+            </div>
+        </div>
+    
+        <div class="cardA g" >
+          
+            
+            <div class="imageA">
+                <img src="vission.png" alt="Card Image"></div>
+                <h3>VISION</h3>
+            
+            <div class="contentA">
+                <p>our vision is clear and simple: to lead the way in web and Android development. We strive to create innovative solutions that make a real impact, pushing the boundaries of what's possible. Through our dedication to excellence, we aim to transform ideas into captivating websites and user-friendly apps...</p>
+            </div>
+        </div>
+    
+        <div class="cardA b" >
+           
+            <div class="imageA">
+                <img src="services.png" alt="Card Image"> </div>
+                <h3>SERVICES</h3>
+           
+            <div class="contentA">
+                <p>IQRA Group offers top-notch services in web and Android development. Our skilled team creates captivating websites and user-friendly Android applications. We specialize in crafting innovative solutions that push boundaries and exceed expectations. With a blend of creativity and cutting-edge technology, we deliver projects that stand out..</p>
+            </div>
+        </div>
+    
+        <div class="cardA y" >
+            
+            <div class="imageA">
+                <img src="achievement.png" alt="Card Image"></div>
+                <h3>ACHIEVEEMENTS</h3>
+            
+            <div class="contentA">
+                <p>IQRA Group has achieved remarkable success in both web and Android development. They have delivered outstanding websites and user-friendly Android applications, earning high praise from clients. Their innovative solutions have pushed boundaries, enhancing user experiences and engagement..</p>
+            </div>
+        </div>
+    </div>
+        </section>
+    </div>
+<!-- 
+    footer -->
+    <footer>
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="#" class="footer-link">Home</a>
+            <a href="#" class="footer-link">Contact</a>
+            <a href="mailto:mdhaiderali1012@gmail.com" class="footer-link">Email</a>
+            <a href="https://wa.me/9891270661" class="footer-link">WhatsApp</a>
+          </div>
+          <div class="footer-info">
+            <p>&copy; 2023 @haiderali. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+<!-- 
+      //bottom button -->
+
+      <style>
+        .nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        background-color: #f2f2f2;
+        display: flex;
+        overflow-x: auto;
+        left:0;
+    }
+    
+    .nav__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        min-width: 60px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-top:1px #abaaaa solid;
+        font-family: sans-serif;
+        font-size: 13px;
+        color: #000000;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.1s ease-in-out;
+    }
+    
+    .nav__link:hover {
+        background-color: #7ff7ec;
+    }
+    
+    .nav__link--active {
+        color: #0e0fff;
+    }
+    
+    .nav__icon {
+        font-size: 20px;
+    }
+    
+      </style>
+        <nav class="nav">
+    
+          <a href="../index.html" class="nav__link" >
+            <i class="material-icons nav__icon">home</i>
+            <span class="nav__text">Home</span>
+          </a>
+          <a href="/Notes/index.html" class="nav__link">
+            <i class="material-icons nav__icon">description</i>
+            <span class="nav__text">Notes</span>
+          </a>
+          
+          <a href="../contactus/Contact_form.html" class="nav__link">
+            <i class="material-icons nav__icon">contact_mail</i>
+            <span class="nav__text">Contact</span>
+          </a>
+          <a href="" class="nav__link">
+            <i class="material-icons nav__icon" id="aboutLink">info</i>
+            <span class="nav__text">About</span>
+          </a>
+          <a href="https://www.google.com" class="nav__link">
+            <i class="material-icons nav__icon">troubleshoot</i>
+            <span class="nav__text">Google</span>
+          </a>
+        </nav>
+    
+    <script >
+      document.addEventListener("DOMContentLoaded", function() {
+                var homeLink = document.getElementById("aboutLink");
+                homeLink.classList.add("nav__link--active");
+            });
+    </script>
+
+</body>
+</html>
